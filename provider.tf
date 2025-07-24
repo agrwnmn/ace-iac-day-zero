@@ -7,6 +7,11 @@ provider "aviatrix" {
 provider "aws" {
   alias  = "ohio"
   region = var.aws_spoke1_region
+
+  assume_role {
+    role_arn     = var.aws_spoke1_role_arn
+    session_name = "aviatrix-lab"
+  }
 }
 
 provider "azurerm" {
