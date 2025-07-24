@@ -96,3 +96,9 @@ variable "ha_enabled" {
   default = false
 }
 
+variable "aws_spoke1_role_arn" {
+  description = "IAM Role to assume for AWS access"
+  type        = string
+}
+
+
